@@ -9,6 +9,18 @@ import javax.servlet.http.HttpServletResponse;
 
 public class AddServlet extends HttpServlet {
 
+	
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		
+		service (req,res);
+		
+	}
+	
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		
+		service (req,res);
+		
+	}
 	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException
 	{
 		int x,y,sum;
