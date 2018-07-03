@@ -28,15 +28,16 @@ public class AddServlet extends HttpServlet {
 		int x,y,sq,sum;
 		
 		x = Integer.parseInt(req.getParameter("num1"));
-		//y = Integer.parseInt(req.getParameter("num2"));
+		y = Integer.parseInt(req.getParameter("num2"));
 		
-		//sum = x + y;
+		sum = x + y;
 		
 		//PrintWriter out = res.getWriter();
 		
 		//out.println("Sum is : " + sum);
 		
-		sq = x*x;
+		sq = sum * sum;
+		req.setAttribute("squ", sq);
 		
 		RequestDispatcher rd = req.getRequestDispatcher("square");
 		rd.forward(req, res);

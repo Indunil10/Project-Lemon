@@ -22,8 +22,10 @@ public class Square extends HttpServlet {
 	}
 	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException
 	{
+		int squar = (int)req.getAttribute("squ");
+		
 		PrintWriter out = res.getWriter();
-		out.println("Welcome to Square servlet");
+		out.println("Square of sum :" + squar);
 	}
 
 }
