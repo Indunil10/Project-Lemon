@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class AddServlet extends HttpServlet {
 
@@ -37,9 +38,17 @@ public class AddServlet extends HttpServlet {
 		//out.println("Sum is : " + sum);
 		
 		sq = sum * sum;
-		req.setAttribute("squ", sq);
+		//req.setAttribute("squ", sq);
 		
-		RequestDispatcher rd = req.getRequestDispatcher("square");
-		rd.forward(req, res);
+		//RequestDispatcher rd = req.getRequestDispatcher("square");
+		//rd.forward(req, res);
+		
+		//res.sendRedirect("square?squ="+sq);
+		
+		HttpSession session = req.getSession();
+		
+		session.setAttribute("squ", sq);
+		
+		res.sendRedirect("square");
 	}
 }
