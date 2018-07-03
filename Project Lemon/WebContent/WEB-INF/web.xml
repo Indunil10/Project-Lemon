@@ -10,4 +10,13 @@
   	<url-pattern>/add</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>x</servlet-name>
+  	<servlet-class>Orenge.Square</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>x</servlet-name>
+  	<url-pattern>/square</url-pattern>
+  </servlet-mapping>
 </web-app>
